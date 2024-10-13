@@ -163,9 +163,7 @@
                                           <button type="button" @click="submitReply(nestedReply.CommentID)">Post Reply</button>
                                         </div>
                                         <div class="replies" v-if="nestedReply.replies.length">
-                                          <!-- Add more nested replies if needed -->
                                           <div v-for="nestedChildReply in nestedReply.replies" :key="nestedChildReply.CommentID" class="comment">
-                                            <!-- Repeat the same structure for nested replies -->
                                             <div class="comment-body">
                                               <div class="comment-header">
                                                 <span class="comment-author">{{ nestedChildReply.First_name }} {{ nestedChildReply.Last_name }}</span>
@@ -178,7 +176,6 @@
                                                 <button type="button" @click="submitReply(nestedChildReply.CommentID)">Post Reply</button>
                                               </div>
                                               <div class="replies" v-if="nestedChildReply.replies.length">
-                                                <!-- Recursive rendering of replies continues -->
                                               </div>
                                             </div>
                                           </div>
@@ -204,7 +201,6 @@
                 <button type="button" class="join-button checkout-btn" @click.stop="join(eventID, BranchID)" v-if="!isUserInEvent(eventID)">RSVP</button>
                 <button type="button" class="leave-button checkout-btn" @click.stop="leave(eventID)" v-else>Leave</button>
 
-                <!-- <button class="checkout-btn">Get ticket</button> -->
 
 
             </div>

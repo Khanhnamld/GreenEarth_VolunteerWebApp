@@ -110,9 +110,6 @@ main {
 }
 
 
-/*
- css for header
-*/
 
 .page-header {
   position: fixed;
@@ -132,8 +129,8 @@ main {
 }
 
 .logo-container {
-  flex: 0 1 auto; /* Don't grow, allow shrink, base size as needed */
-  margin-right: auto; /* Pushes everything else to the right */
+  flex: 0 1 auto;
+  margin-right: auto;
   margin-left: 20px;
 }
 
@@ -149,17 +146,17 @@ main {
 .search-box {
   margin-right: 13em;
   margin-left: 70px;
-  flex: 1; /* Allows the search box to grow and take available space */
+  flex: 1;
   display: flex;
-  justify-content: center; /* Center the search bar within its container */
+  justify-content: center;
   align-items: center;
-  max-width: 600px; /* Maximum width for the search box */
+  max-width: 600px;
   position: relative;
 }
 
 .search-bar {
-  width: 100%; /* Full width to fill its container */
-  padding: 8px 40px; /* Adequate padding for placing the icon */
+  width: 100%;
+  padding: 8px 40px;
   font-size: 1.2em;
   color: white;
   background: rgb(70, 69, 72);
@@ -170,7 +167,7 @@ main {
 
 .search-icon {
   position: absolute;
-  left: 15px; /* Position icon within the search bar */
+  left: 15px;
   color: #ccc;
 }
 
@@ -184,7 +181,7 @@ main {
 }
 
 .rightcontent-container {
-  position: relative; /* Ensures dropdown menu is positioned relative to this container */
+  position: relative;
   flex: 0 1 auto;
   display: flex;
   align-items: center;
@@ -247,27 +244,23 @@ main {
   content: '';
   position: absolute;
   width: 0;
-  height: 2px; /* Thickness of the underline */
+  height: 2px;
   bottom: 0;
   left: 50%;
-  background-color: black; /* Color of the underline */
-  transition: all 0.3s ease; /* Smooth transition for moving and resizing the underline */
+  background-color: black;
+  transition: all 0.3s ease;
 
 }
 
 .lower-header nav li:hover::after, .lower-header nav li.active::after{
-  width: 100%; /* Full width on hover or when active */
-  left: 0; /* Start from the left edge */
+  width: 100%;
+  left: 0;
 }
 
 .navbar-link {
   font-size: large;
 }
 
-
-/*
-css for footer
-*/
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -368,33 +361,33 @@ body {
   /* display: none; */
   margin-top: 0.2em;
   transform: translateX(-10%);
-  top: 50px; /* Adjust this value to position it below the profile image */
-  right: 0; /* Aligns the dropdown to the right edge of the profile container */
-  width: 100px; /* Control the width to avoid overflow */
+  top: 50px;
+  right: 0;
+  width: 100px;
   background-color: rgba(255, 255, 255, 0.886);
   border: 1px solid rgb(232, 232, 232);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1;
-  visibility: hidden; /* Hide the menu initially */
-  opacity: 0; /* Start fully transparent */
-  transform: translateY(-10px) translateX(-10%); /* Start slightly above the final position */
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px) translateX(-10%);
   transition: opacity 0.3s, transform 0.3s;
 }
 
 .dropdown-menu::after {
   content: "";
   position: absolute;
-  top: -8px; /* Slightly above the dropdown to show the pointer */
-  left: 50%; /* Center the pointer relative to the dropdown */
-  margin-left: 27px; /* This centers the triangle (half the total width of 10px) */
+  top: -8px;
+  left: 50%;
+  margin-left: 27px;
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 10px 10px 10px; /* Creates an upward-pointing triangle */
-  border-color: transparent transparent rgb(197, 194, 194) transparent; /* Bottom border is white, others are transparent */
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent rgb(197, 194, 194) transparent;
 }
 
-.dropdown-menu[data-show="true"] { /* Added for Vue.js control */
+.dropdown-menu[data-show="true"] { 
   visibility: visible;
   opacity: 1;
   transform: translateY(0) translateX(-10%);

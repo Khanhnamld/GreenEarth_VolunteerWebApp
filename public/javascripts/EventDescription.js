@@ -4,7 +4,7 @@ var appdiv = new Vue ({
       Branches: [],
       User_Event: [],
       User_Branch: [],
-      name: '',
+      name: '', 
       description: '',
       date: '',
       location: '',

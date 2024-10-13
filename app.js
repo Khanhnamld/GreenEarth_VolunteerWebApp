@@ -36,27 +36,27 @@ app.use(cookieParser());
 // view engine setup
 
 
-app.use(session({
-  secret: process.env.SESSION_SECRET,
-  resave: false,
-  saveUninitialized: false,
-  secure: false
-}));
+  app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    secure: false
+  }));
 
-// Create a connection object
-const dbConnectionPool = mysql.createPool({
-  database: 'volunteer', // the name of the database you want to connect to
-  multipleStatements: true
-});
+  // Create a connection object
+  const dbConnectionPool = mysql.createPool({
+    database: 'volunteer', // the name of the database you want to connect to
+    multipleStatements: true
+  });
 
-dbConnectionPool.getConnection(function (err, connection) {
-  if (err) {
-    console.log(err);
-    return;
-  }
+  dbConnectionPool.getConnection(function (err, connection) {
+    if (err) {
+      console.log(err);
+      return;
+    }
 
-  console.log("database connected");
-});
+    console.log("database connected");
+  });
 
 
 if (!fs.existsSync('uploads')) {
